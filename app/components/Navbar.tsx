@@ -1,5 +1,11 @@
 "use client";
 import React, { useState } from "react";
+import { Plus_Jakarta_Sans } from "next/font/google";
+
+const plusjakartasans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta-sans",
+  subsets: ["latin"],
+});
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +15,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between p-4 bg-[#089BFF] w-full fixed top-0 left-0 z-50">
+    <nav className={`flex items-center justify-between p-4 bg-[#089BFF] w-full fixed top-0 left-0 z-50 ${plusjakartasans.className}`}>
       <div className="flex items-center">
         <img
           alt="Logo of EconoMate"
@@ -18,20 +24,20 @@ const Navbar: React.FC = () => {
         />
       </div>
       <div className="hidden md:flex items-center space-x-6">
-        <a className="text-white text-lg" href="#">
+        <a className="text-white text-lg font-semibold" href="#" >
           Home
         </a>
-        <a className="text-white text-lg" href="#">
+        <a className="text-white text-lg font-semibold" href="#" >
           Dashboard
         </a>
-        <a className="text-white text-lg" href="#">
+        <a className="text-white text-lg font-semibold" href="#" >
           Aplikasi
         </a>
-        <a className="text-white text-lg" href="#">
+        <a className="text-white text-lg font-semibold" href="#" >
           Sign in
         </a>
         <a
-          className="bg-white text-blue-500 text-lg font-semibold py-2 px-4 rounded"
+          className="bg-white text-[#089BFF] text-lg font-semibold py-2 px-4 rounded"
           href="#"
         >
           Sign up
