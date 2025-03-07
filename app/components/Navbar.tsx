@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import Image from "next/image";
 
 const plusjakartasans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -15,25 +16,29 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className={`flex items-center justify-between p-4 bg-[#089BFF] w-full fixed top-0 left-0 z-50 ${plusjakartasans.className}`}>
+    <nav
+      className={`flex items-center justify-between p-4 bg-[#089BFF] w-full fixed top-0 left-0 z-50 ${plusjakartasans.className}`}
+    >
       <div className="flex items-center">
-        <img
+        <Image
           alt="Logo of EconoMate"
           className="w-45 pl-5"
-          src="/logo-navbar.png"
+          src="/logo.png"
+          width={200}
+          height={50}
         />
       </div>
       <div className="hidden md:flex items-center space-x-6">
-        <a className="text-white text-lg font-semibold" href="#" >
+        <a className="text-white text-lg font-semibold" href="#">
           Home
         </a>
-        <a className="text-white text-lg font-semibold" href="#" >
+        <a className="text-white text-lg font-semibold" href="#">
           Dashboard
         </a>
-        <a className="text-white text-lg font-semibold" href="#" >
+        <a className="text-white text-lg font-semibold" href="#">
           Aplikasi
         </a>
-        <a className="text-white text-lg font-semibold" href="#" >
+        <a className="text-white text-lg font-semibold" href="#">
           Sign in
         </a>
         <a
