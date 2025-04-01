@@ -6,9 +6,9 @@ import Image from "next/image";
 const SignInPage = () => {
   return (
     <div className="bg-[#F2F9FF] flex items-center justify-center h-screen w-screen">
-      <div className="bg-white rounded-lg shadow-lg flex w-full max-w-4xl">
-        {/* EconoMate Logo */}
-        <div className="bg-[#089BFF] text-white p-8 rounded-l-lg flex flex-col items-center justify-center w-1/2">
+      <div className="bg-white rounded-lg shadow-lg flex w-4/5 max-w-4xl">
+        {/* Left Section */}
+        <div className="hidden md:flex w-1/2 bg-[#089BFF] text-white p-8 rounded-l-lg flex-col items-center justify-center">
           <div className="text-center">
             <p className="mb-4">
               Aplikasi yang siap jadi
@@ -26,8 +26,8 @@ const SignInPage = () => {
         </div>
 
         {/* Sign In Form */}
-        <div className="p-8 w-3/4 flex flex-col justify-center">
-          <h2 className="text-3xl font-bold text-[#089BFF] mb-6 text-center">
+        <div className="p-8 w-full md:w-3/4 flex flex-col justify-center">
+          <h2 className="lg:text-3xl font-bold text-[#089BFF] mb-6 text-center text-2xl">
             Masuk ke EconoMate
           </h2>
           <form>
@@ -37,8 +37,8 @@ const SignInPage = () => {
                   alt="Profile icon"
                   className="shadow-lg"
                   src="/profile.png"
-                  width={24}
-                  height={24}
+                  width={20}
+                  height={20}
                 />
               </div>
               <label className="block text-gray-700 flex-grow">
@@ -55,8 +55,8 @@ const SignInPage = () => {
                   alt="Password icon"
                   className="shadow-lg"
                   src="/password.png"
-                  width={24}
-                  height={24}
+                  width={20}
+                  height={20}
                 />
               </div>
               <label className="block text-gray-700 flex-grow">
@@ -68,7 +68,7 @@ const SignInPage = () => {
               </label>
             </div>
             <button
-              className="w-full bg-[#089BFF] text-white py-2 rounded-full hover:bg-blue-600 transition duration-200"
+              className="w-full bg-[#089BFF] text-white py-2 rounded-full hover:bg-gray-200 hover:text-[#089bff] transition duration-200"
               type="submit"
             >
               Sign in
@@ -78,7 +78,7 @@ const SignInPage = () => {
           {/* Or Sign In with */}
           <div className="flex items-center my-6">
             <div className="flex-grow border-t border-gray-300"></div>
-            <span className="mx-4 text-gray-500">Atau sign in dengan</span>
+            <span className="mx-4 text-gray-500">Atau masuk dengan</span>
             <div className="flex-grow border-t border-gray-300"></div>
           </div>
 
@@ -87,17 +87,17 @@ const SignInPage = () => {
             <button className="bg-white border border-gray-300 rounded-full p-2 hover:bg-gray-100 transition duration-300 transform hover:scale-110">
               <Image
                 alt="Google logo"
-                height={30}
+                height={20}
                 src="/logo-google.png"
-                width={30}
+                width={20}
               />
             </button>
             <button className="bg-white border border-gray-300 rounded-full p-2 hover:bg-gray-100 transition duration-300 transform hover:scale-110">
               <Image
                 alt="Facebook logo"
-                height={30}
+                height={20}
                 src="/logo-facebook.png"
-                width={30}
+                width={20}
               />
             </button>
           </div>
