@@ -1,11 +1,31 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { useRouter, usePathname } from "next/navigation"; // Import usePathname
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Sidebar = () => {
   const [showLogout, setShowLogout] = useState(false);
-  const [activeMenu, setActiveMenu] = useState("Dompet"); // Menyimpan menu aktif
+  const [activeMenu, setActiveMenu] = useState("");
+  const router = useRouter();
+  const pathname = usePathname(); // Get current path
+
+  useEffect(() => {
+    // Set active menu based on the current path
+    if (pathname.includes("user-dashboard")) {
+      setActiveMenu("Dompet");
+    } else if (pathname.includes("user-aktivitas")) {
+      setActiveMenu("Aktivitas");
+    } else if (pathname.includes("analisis")) {
+      setActiveMenu("Analisis");
+    } else if (pathname.includes("split-bill")) {
+      setActiveMenu("Split Bill");
+    } else if (pathname.includes("belanja")) {
+      setActiveMenu("Belanja");
+    } else if (pathname.includes("pengaturan")) {
+      setActiveMenu("Pengaturan");
+    }
+  }, [pathname]);
 
   return (
     <div className="w-64 bg-[#089BFF] p-4 h-full">
@@ -15,7 +35,7 @@ const Sidebar = () => {
         height={180}
         src="/logo.png"
         width={180}
-        onClick={() => setActiveMenu("Dompet")} // Tambahkan onClick di sini
+        onClick={() => setActiveMenu("Dompet")}
       />
       <nav>
         <ul>
@@ -32,7 +52,7 @@ const Sidebar = () => {
                 activeMenu === "Dompet" ? "text-yellow-400" : "text-white"
               }`}
               href="#"
-              onClick={() => setActiveMenu("Dompet")}
+              onClick={() => router.push("/user-dashboard")}
             >
               <i className="fas fa-wallet mr-2"></i> Dompet
             </a>
@@ -43,7 +63,7 @@ const Sidebar = () => {
                 activeMenu === "Aktivitas" ? "text-yellow-400" : "text-white"
               }`}
               href="#"
-              onClick={() => setActiveMenu("Aktivitas")}
+              onClick={() => router.push("/user-aktivitas")}
             >
               <i className="fas fa-list-alt mr-2"></i> Aktivitas
             </a>
@@ -61,7 +81,7 @@ const Sidebar = () => {
                 activeMenu === "Analisis" ? "text-yellow-400" : "text-white"
               }`}
               href="#"
-              onClick={() => setActiveMenu("Analisis")}
+              onClick={() => router.push("/analisis")}
             >
               <i className="fas fa-chart-line mr-2"></i> Analisis
             </a>
@@ -72,7 +92,7 @@ const Sidebar = () => {
                 activeMenu === "Split Bill" ? "text-yellow-400" : "text-white"
               }`}
               href="#"
-              onClick={() => setActiveMenu("Split Bill")}
+              onClick={() => router.push("/split-bill")}
             >
               <i className="fas fa-user-friends mr-2"></i> Split Bill
             </a>
@@ -83,7 +103,7 @@ const Sidebar = () => {
                 activeMenu === "Belanja" ? "text-yellow-400" : "text-white"
               }`}
               href="#"
-              onClick={() => setActiveMenu("Belanja")}
+              onClick={() => router.push("/belanja")}
             >
               <i className="fas fa-shopping-cart mr-2"></i> Belanja
             </a>
@@ -94,7 +114,7 @@ const Sidebar = () => {
                 activeMenu === "Pengaturan" ? "text-yellow-400" : "text-white"
               }`}
               href="#"
-              onClick={() => setActiveMenu("Pengaturan")}
+              onClick={() => router.push("/pengaturan")}
             >
               <i className="fas fa-cog mr-2"></i> Pengaturan
             </a>
