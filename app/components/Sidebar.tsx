@@ -142,7 +142,10 @@ const Sidebar = () => {
           {showLogout && (
             <div className="absolute bg-white text-black rounded shadow-lg mt-5 right-0 w-35">
               <ul>
-                <li className="px-4 py-1 hover:bg-gray-200 cursor-pointer border-b text-sm">
+                <li
+                  className="px-4 py-1 hover:bg-gray-200 cursor-pointer border-b text-sm"
+                  onClick={() => router.push("/profil")}
+                >
                   Profil
                 </li>
                 <li

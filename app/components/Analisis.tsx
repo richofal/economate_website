@@ -44,7 +44,7 @@ const Analisis = () => {
     <div className="bg-blue-50 p-6 min-h-screen">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Saldo Section */}
-        <div className="bg-blue-500 text-white p-6 rounded-lg shadow-lg">
+        <div className="bg-[#089BFF] text-white p-6 rounded-lg shadow-lg">
           <h2 className="text-xl font-semibold">Saldo</h2>
           <p className="text-4xl font-bold mt-2">Rp {formatNumber(20274714)}</p>
         </div>
@@ -71,8 +71,8 @@ const Analisis = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Pemasukan */}
           <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl text-blue-500 font-semibold">Pemasukan</h3>
-            <p className="text-4xl font-bold text-blue-500 mt-2">
+            <h3 className="text-xl text-[#089BFF] font-semibold">Pemasukan</h3>
+            <p className="text-4xl font-bold text-[#089BFF] mt-2">
               Rp {formatNumber(14700000)}
             </p>
             <div className="w-28 h-28 my-4">
@@ -82,7 +82,7 @@ const Analisis = () => {
             {["Uang saku 45%", "Investasi 35%", "Lainnya 20%"].map(
               (item, index) => (
                 <div key={index} className="flex items-center space-x-3 my-2">
-                  <i className="fas fa-wallet text-blue-500"></i>
+                  <i className="fas fa-wallet text-[#089BFF]"></i>
                   <span className="text-black">{item}</span>
                   <span className="ml-auto text-black">
                     Rp {formatNumber(680000 * (index + 1))}
@@ -94,8 +94,10 @@ const Analisis = () => {
 
           {/* Pengeluaran */}
           <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl text-blue-500 font-semibold">Pengeluaran</h3>
-            <p className="text-4xl font-bold text-blue-500 mt-2">
+            <h3 className="text-xl text-[#089BFF] font-semibold">
+              Pengeluaran
+            </h3>
+            <p className="text-4xl font-bold text-[#089BFF] mt-2">
               Rp {formatNumber(14700000)}
             </p>
             <div className="w-28 h-28 my-4">
@@ -105,7 +107,7 @@ const Analisis = () => {
             {["Transportasi 40%", "Makanan 30%", "Lainnya 30%"].map(
               (item, index) => (
                 <div key={index} className="flex items-center space-x-3 my-2">
-                  <i className="fas fa-wallet text-blue-500"></i>
+                  <i className="fas fa-wallet text-[#089BFF]"></i>
                   <span className="text-black">{item}</span>
                   <span className="ml-auto text-black">
                     Rp {formatNumber(680000 * (index + 1))}
