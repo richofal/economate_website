@@ -89,7 +89,7 @@ const SplitBill = () => {
     <div className="bg-blue-50 p-6 min-h-screen">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Header */}
-        <div className="bg-blue-500 text-white p-6 rounded-lg shadow-lg">
+        <div className="bg-[#089BFF] text-white p-6 rounded-lg shadow-lg">
           <h2 className="text-xl font-semibold">Split Bill</h2>
         </div>
 
@@ -114,7 +114,7 @@ const SplitBill = () => {
             )}
           </div>
           <button
-            className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600 transition-all"
+            className="bg-[#089BFF] text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600 transition-all"
             onClick={addParticipant}
           >
             Tambah Peserta
@@ -140,7 +140,7 @@ const SplitBill = () => {
             )}
           </div>
           <button
-            className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600 transition-all"
+            className="bg-[#089BFF] text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600 transition-all"
             onClick={addExpense}
           >
             Tambah Pengeluaran
@@ -151,7 +151,7 @@ const SplitBill = () => {
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <h3 className="text-xl font-bold text-black mb-4">Kontribusi</h3>
           <button
-            className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600 transition-all"
+            className="bg-[#089BFF] text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600 transition-all"
             onClick={recordContribution}
           >
             Catat Kontribusi

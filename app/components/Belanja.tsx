@@ -45,7 +45,7 @@ const Shopping = () => {
     <div className="bg-blue-50 p-6 min-h-screen">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Header */}
-        <div className="bg-blue-500 text-white p-6 rounded-lg shadow-lg">
+        <div className="bg-[#089BFF] text-white p-6 rounded-lg shadow-lg">
           <h2 className="text-xl font-semibold">Shopping</h2>
           <p className="text-lg mt-2">
             {budget !== null
@@ -72,7 +72,7 @@ const Shopping = () => {
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <h3 className="text-xl font-bold text-black mb-4">Budget</h3>
           <button
-            className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600 transition-all"
+            className="bg-[#089BFF] text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600 transition-all"
             onClick={setInitialBudget}
           >
             Tetapkan Budget
@@ -116,8 +116,8 @@ const Shopping = () => {
           <button
             className={`px-4 py-2 rounded-lg mt-4 transition-all ${
               budget === null
-                ? "bg-gray-400 text-gray-700 cursor-not-allowed"
-                : "bg-blue-500 text-white hover:bg-blue-600"
+                ? "bg-gray-300 text-gray-700 cursor-not-allowed"
+                : "bg-[#089BFF] text-white hover:bg-blue-600"
             }`}
             onClick={addItem}
             disabled={budget === null}

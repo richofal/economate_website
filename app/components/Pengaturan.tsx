@@ -32,7 +32,7 @@ const Pengaturan = () => {
     <div className="bg-blue-50 p-6 min-h-screen">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Header */}
-        <div className="bg-blue-500 text-white p-6 rounded-lg shadow-lg">
+        <div className="bg-[#089BFF] text-white p-6 rounded-lg shadow-lg">
           <h2 className="text-xl font-semibold">Pengaturan</h2>
         </div>
 
@@ -76,7 +76,7 @@ const Pengaturan = () => {
                   };
                   input.click();
                 }}
-                className="px-4 py-2 bg-blue-500 text-white rounded-lg font-bold hover:bg-blue-600"
+                className="px-4 py-2 bg-[#089BFF] text-white rounded-lg font-bold hover:bg-blue-600"
               >
                 Unggah Foto
               </button>
@@ -186,7 +186,7 @@ const Pengaturan = () => {
             Jika Anda membutuhkan bantuan, silakan hubungi tim dukungan kami di{" "}
             <a
               href="mailto:support@economate.com"
-              className="text-blue-500 underline"
+              className="text-[#089BFF] underline"
             >
               support@economate.com
             </a>
