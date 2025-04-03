@@ -1,11 +1,25 @@
 "use client";
 
 import Navbar from "../components/Navbar";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Footer from "../components/Footer";
 
 const SignInPage = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSignIn = (e: React.FormEvent) => {
+    e.preventDefault(); // Mencegah reload halaman default pada form submit
+    if (username === "admin" && password === "admin") {
+      window.location.href = "/admin-dashboard";
+    } else if (username === "user" && password === "user") {
+      window.location.href = "/user-dashboard";
+    } else {
+      alert("Username atau password salah!");
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -34,7 +48,7 @@ const SignInPage = () => {
             <h2 className="lg:text-3xl font-bold text-[#089BFF] mb-6 text-center text-2xl">
               Masuk ke EconoMate
             </h2>
-            <form>
+            <form onSubmit={handleSignIn}>
               <div className="mb-4 flex items-center">
                 <div className="bg-white text-white rounded-full p-2 mr-2 flex items-center justify-center shadow-lg">
                   <Image
@@ -50,6 +64,8 @@ const SignInPage = () => {
                     className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-[#089BFF] shadow-lg"
                     placeholder="Username"
                     type="text"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
                   />
                 </label>
               </div>
@@ -68,13 +84,14 @@ const SignInPage = () => {
                     className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-[#089BFF] shadow-lg"
                     placeholder="Password"
                     type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </label>
               </div>
               <button
                 className="w-full bg-[#089BFF] text-white py-2 rounded-full hover:bg-gray-200 hover:text-[#089bff] transition duration-200"
-                type="button"
-                onClick={() => (window.location.href = "/user-dashboard")}
+                type="submit"
               >
                 Sign in
               </button>
